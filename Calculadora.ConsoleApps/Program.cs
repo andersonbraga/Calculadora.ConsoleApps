@@ -17,17 +17,32 @@
                 Console.WriteLine("Calculadora Tabajara 1.0\n");
 
                 Console.WriteLine("Tela Principal\n");
-
+                Console.WriteLine("Digite 1 para Adição ");
+                Console.WriteLine("Digite 5 para Visualizar as operações\n");
 
                 Console.Write("Opção: ");
                 opcao = Console.ReadLine();
 
 
-                Console.WriteLine("Digite 1 para Adicionar ");
+                
                 string operacao = "";
                switch (opcao)
                 {
                     case "1" : operacao = "Adição";
+                        break;
+                    case "5":
+                        {
+                            Console.WriteLine("Visualizando operações realizadas: \n");
+
+                            foreach (string op in operacoes)
+                            {
+                                Console.WriteLine(op);
+                            }
+
+                            Console.ReadLine();
+                        };
+                        continue;
+                    default:
                         break;
                 }
                 Console.WriteLine("Digite o primeiro número");
@@ -42,7 +57,7 @@
                         break;
                     default:break;
                 }
-                Console.WriteLine(resultado);
+                Console.Write($"O resultado da operação de {operacao} é: {resultado}");
                 string simbolo = "";
                 switch (opcao)
                 {
@@ -50,7 +65,8 @@
                         break;
                         default:break;
                 }
-                operacoes.Add(simbolo);
+                string descricaoOperacao = $"{primeiroNumero} {simbolo} {segundoNumero} = {resultado}";
+                operacoes.Add(descricaoOperacao);
             }
 
 
