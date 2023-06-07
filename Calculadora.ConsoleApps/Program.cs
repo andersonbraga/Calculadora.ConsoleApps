@@ -5,6 +5,7 @@
         static void Main(string[] args)
         {
             string opcao;
+            string test;
 
             List<String> operacoes = new List<string>();
 
