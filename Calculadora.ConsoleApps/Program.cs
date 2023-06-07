@@ -10,7 +10,7 @@
 
             while (true)
             {
-              
+
 
                 Console.Clear();
 
@@ -24,5 +24,6 @@
 
 
             }
+        }
     }
 }
